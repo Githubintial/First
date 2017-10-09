@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>NodeJS Starter Application</title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="main.css">
+	
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="stylesheets/style.css">-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	
+	$("#register").click(function(){
+		var title = $('#BName').val();
+		var description = $('#BNum').val();
+	    var docId = $('#BName').val();
+		
+		
+		alert(docId);
+			$.post("/register",{title : title, description:description,docId : docId},function(responseHTML) {$('#asd').html(responseHTML);});
+			});
+			});
+			</script>
+  </head>
+  <style>
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: lightblue;
+    clear: left;
+  
+}
+</style>
+
+  <body>
+  <header>
+			<div class="container-fluid">
+			<div class="row">
+				<!--<div class="col-md-4">
+			<img src="mss.png" class="img-rounded" alt="Ap Cloud" width="250" height="80">
+			</div>!-->
+			<div class="col-md-12 text-center">
+			<h1><span style="color: #000000">INTERNSHIP PROGRAM</span></h1>
+			</div>
+			<!--<div class="col-md-4">
+			<img src="hello-world.png" class="img-rounded" style="float:right" alt="MSS" width="250" height="80">
+			</div>!-->
+			</div>
+			</div>
+</header> 
+<br>
+<br>
+<article class="col-xs-12 maincontent">
+				
+<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+<div class="panel panel-default">
+	<div class="panel-body">
+	<h3 class="thin text-center">DETAILS</h3>
+	<hr>
+	<!-- <form name="myForm" action="/reg" method="get">-->
+	<div class="top-margin">
+	<label>Title <span class="text-danger">*</span></label>
+	<input type="text" class="form-control" id="BName" name="busName"  required/> 
+
+	</div>
+							
+<div class="top-margin">
+	<label>Description <span class="text-danger">*</span></label>
+		<input type="text" class="form-control" id="BNum" name="bnum"  required/>
+		        
+               				</div>
+	<div class="col-lg-12 text-right">
+	<button class="btn btn-action" id="register" type="submit"><center>Register</center></button>
+		<center><div id="#asd" name="#asd"></div></center>
+    </div>
+		
+								
+									
+									
+									
+									
+									
+
+									
+								</div>
+							<!--  </form>-->
+						</div>
+					</div>
+
+				</div>
+				
+			</article>
+</body>
+</html>
+  
+  
